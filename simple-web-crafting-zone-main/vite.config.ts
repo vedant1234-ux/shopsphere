@@ -10,9 +10,29 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
+  },
   server: {
-    port: 5174,
-    host: 'localhost',
-    strictPort: true
+    port: 3000,
+    host: true,
+    strictPort: false,
+    open: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  preview: {
+    port: 3000,
+    strictPort: false,
   }
 })

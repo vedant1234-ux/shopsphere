@@ -64,7 +64,7 @@ npm install
 npm run dev
 ```
 
-Open your browser at [http://localhost:5174](http://localhost:5174)
+Then open: [http://localhost:3000](http://localhost:3000)
 
 ### Environment Variables
 
